@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yogesh Kumar Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(to right, #1e3c72, #9e1891); color: white; }
+    .section { padding: 60px 20px; }
+    .dark-toggle { position: fixed; top: 10px; right: 10px; cursor: pointer; }
+  </style>
+</head>
+<body class="transition duration-300" id="body">
+
+  <div class="dark-toggle text-lg font-bold">🌓</div>
+
+  <header class="text-center section">
+    <h1 class="text-4xl font-bold mb-2">Yogesh Kumar</h1>
+    <p class="text-xl text-blue-100">Full Stack Developer | B.Tech CSE</p>
+    <div class="mt-4 space-x-4">
+      <a href="mailto:yk375341@gmail.com" class="underline">Email</a>
+      <a href="https://github.com/Yogesh-kumar18" target="_blank" class="underline">GitHub</a>
+      <a href="https://www.linkedin.com/in/yogesh-kumar-827951241" target="_blank" class="underline">LinkedIn</a>
+    </div>
+  </header>
+
+  <section class="section" id="about">
+    <h2 class="text-2xl font-semibold">About Me</h2>
+    <p class="mt-2 max-w-2xl mx-auto">Motivated B.Tech Computer Science Engineering student with strong skills in programming, web technologies, and a passion for building impactful tech solutions.</p>
+  </section>
+
+  <section class="section bg-blue-800" id="skills">
+    <h2 class="text-2xl font-semibold">Skills</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 max-w-3xl mx-auto">
+      <span>C</span><span>Java</span><span>JavaScript</span><span>HTML/CSS</span>
+      <span>MySQL</span><span>Git</span><span>VS Code</span><span>DSA & OOP</span>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <h2 class="text-2xl font-semibold">Projects</h2>
+    <div class="mt-4 max-w-3xl mx-auto space-y-4">
+      <div class="p-4 bg-blue-900 rounded shadow">QueEase – A queue management system with real-time tracking and remote check-ins.</div>
+      <div class="p-4 bg-blue-900 rounded shadow">Markdown Previewer – Real-time markdown preview using HTML, CSS, JS, and Marked.js.</div>
+    </div>
+  </section>
+
+  <section class="section bg-blue-800" id="education">
+    <h2 class="text-2xl font-semibold">Education</h2>
+    <ul class="mt-2 max-w-xl mx-auto space-y-2">
+      <li><strong>B.Tech CSE</strong> – GL Bajaj, Mathura (2026)</li>
+      <li>Intermediate – Smt. Vasmati Devi Inter College (2020)</li>
+      <li>High School – Smt. Vasmati Devi Inter College (2018)</li>
+    </ul>
+  </section>
+
+  <section class="section" id="certificates">
+    <h2 class="text-2xl font-semibold">Certificates</h2>
+    <ul class="mt-2 max-w-xl mx-auto space-y-2">
+      <li>DSA with Java – Great Learning (May 2025)</li>
+      <li>AI Tools Workshop – be10X (Nov 2023)</li>
+    </ul>
+  </section>
+
+  <section class="section bg-blue-800" id="testimonials">
+    <h2 class="text-2xl font-semibold">Testimonials</h2>
+    <div class="mt-4 italic max-w-2xl mx-auto">"Yogesh is a dedicated and sharp learner who delivers quality work on time!"</div>
+  </section>
+
+  <footer class="text-center p-4 text-sm bg-black">
+    © <span id="year"></span> Yogesh Kumar. Built with ❤️
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.dark-toggle').onclick = () => {
+      document.getElementById('body').classList.toggle('bg-white');
+      document.getElementById('body').classList.toggle('text-black');
+    };
+    ScrollReveal().reveal('.section', { delay: 200, distance: '50px', origin: 'bottom', interval: 200 });
+  </script>
+</body>
+</html>
